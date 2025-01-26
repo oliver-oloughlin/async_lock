@@ -1,0 +1,17 @@
+{
+  "name": "@olli/async-lock",
+  "version": "1.0.0-rc.1",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.11"
+  },
+  "tasks": {
+    "check": "deno check ./**/*.ts",
+    "prep": "deno task check && deno lint && deno fmt && deno test"
+  },
+  "test": {
+    "include": ["./tests"]
+  }
+}

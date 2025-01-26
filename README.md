@@ -60,4 +60,4 @@ Any contributions are welcomed and appreciated. How to contribute:
 ## License
 
 Published under
-[MIT License](https://github.com/oliver-oloughlin/kvdex/blob/main/LICENSE)
+[MIT License](https://github.com/oliver-oloughlin/async_lock/blob/main/LICENSE)

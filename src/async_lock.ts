@@ -41,9 +41,7 @@ export class AsyncLock {
     }
   }
 
-  /**
-   * Cancel and remove all queued tasks.
-   */
+  /** Cancel and remove any queued tasks. */
   cancel(): void {
     let lock = this.queue.shift();
     while (lock) {

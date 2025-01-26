@@ -27,7 +27,7 @@ await Promise.all([
 
 ## Cancel
 
-Cancel any queued tasks and empty the task queue.
+Cancel and remove any queued tasks.
 
 ```ts
 import { AsyncLock } from "@olli/async-lock";

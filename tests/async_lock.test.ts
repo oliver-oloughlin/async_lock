@@ -66,4 +66,17 @@ Deno.test("async_lock", async (t) => {
       assert(results[2].status === "fulfilled");
     },
   );
+
+  await t.step("Should infer and return correct result type", async () => {
+    const lock = new AsyncLock();
+
+    // This test is primarily used as a utility to check that T is inferred as <"one" | "two"> instead of <string>
+    const taskResult = await lock.run(async () => {
+      await sleep(100);
+      return Math.random() >= 0.5 ? "one" : "two";
+    });
+
+    assert(taskResult.status === "fulfilled");
+    assert(["one", "two"].includes(taskResult.value));
+  });
 });

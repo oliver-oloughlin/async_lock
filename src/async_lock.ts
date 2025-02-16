@@ -17,7 +17,7 @@ export class AsyncLock {
    * @param fn - Task callback function.
    * @returns A promise resolving to the awaited return of the given callback function.
    */
-  async run<T>(fn: () => T): Promise<TaskResult<Awaited<T>>> {
+  async run<const T>(fn: () => T): Promise<TaskResult<Awaited<T>>> {
     try {
       const acquiredLock = await this.acquireLock();
       if (!acquiredLock) {
